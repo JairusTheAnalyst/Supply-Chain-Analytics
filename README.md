@@ -286,3 +286,4 @@ The model achieved a high R² score of 0.76 on the training data and 0.75 on the
 - Enable real-time predictions by incorporating live data feeds (e.g., recent sales, interest rates, or property listings). This would make the model practical for dynamic, on-the-fly predictions suitable for fast-paced real estate markets.
 
 ### References
+[Kaggle Datasets](https://www.kaggle.com/datasets)
