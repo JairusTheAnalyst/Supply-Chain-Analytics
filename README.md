@@ -24,6 +24,7 @@
 
 ## Project overview
 This project focused on predicting house prices in Perth, Australia, leveraging Machine Learning algorithms to identify key price determinants and forecast values with accuracy. By analyzing a range of property features, neighborhood data, and market trends, this model aims to assist potential buyers, real estate agents, and investors with data-driven insights for better decision-making.
+---
 
 ### Goals and Objectives
 - Develop a predictive model that accurately estimates house prices based on various attributes.
