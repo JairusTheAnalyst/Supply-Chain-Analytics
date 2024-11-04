@@ -91,16 +91,22 @@ For categorical features such as Property Type or Neighborhood, applied mode imp
 ```
 df.isnull().sum()
 ```
+![image](https://github.com/user-attachments/assets/0d8360ff-f956-44f6-9337-bd8e9c3decf4)
+
 - Percentage missing
 ```
 df.isnull().mean()*100
 ```
+![image](https://github.com/user-attachments/assets/d327c849-c3ed-4704-bac1-12a436401142)
+
 ### visualizing missing values in the dataset
 ```
 plt.figure(figsize=(10,8))
 sns.heatmap(df.isnull())
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/7bad74ee-8bf7-42ef-8a6c-4ee34980b0c1)
+
 ### Dealing with missing values in the data
 We then Drop columns which have many null values and those that are not so important, therefore from our dataset we drop the NEAREST_SCH_RANK column.We don't require the column NEAREST_SCH_RANK since it has too many null values. We can also drop the ADDRESS columns. The missing values in Garage can be replaced by the median while 75% of the values will replace the BUILD_YEAR column
 
@@ -150,6 +156,7 @@ sns.scatterplot(x=df.BEDROOMS, y=df.PRICE_Log)
 print("Skewness: %f" % df['PRICE'].skew())
 print("Kurtosis: %f" % df['PRICE'].kurt())
   ```
+![image](https://github.com/user-attachments/assets/a5e4699f-1bce-4077-bc8e-bda2036974f1)
 
 ### Log transformation on skewed features like Price .
 
@@ -159,6 +166,7 @@ sns.distplot(df['PRICE_Log'])
 print("Skewness: %f" % df['PRICE_Log'].skew())
 print("Kurtosis: %f" % df['PRICE_Log'].kurt())
  ```
+![image](https://github.com/user-attachments/assets/79e2ccb9-2cab-4a17-b470-cdf415873cb4)
 
 
    - Scaled numerical features using standardization or min-max scaling to ensure that all values were on a comparable scale for model training.
@@ -179,13 +187,19 @@ Descriptive statistics was computed for numeric variables in the dataset to dete
 ```Python
 df.describe().T
 ```
+![image](https://github.com/user-attachments/assets/42e4f666-07d3-4d82-8af4-f0d455df01e4)
+
 -  The count of bedrooms
 ```
 plt.figure(figsize=(12,6))
 sns.countplot(df.BEDROOMS)
 ```
+![image](https://github.com/user-attachments/assets/70195f08-6783-43b7-9963-5721d16f60e7)
+
 - The count of bathrooms
 ```
+![image](https://github.com/user-attachments/assets/3b1acae2-07f8-4cd9-aa05-5c13df1c54b5)
+
 plt.figure(figsize=(12,6))
 sns.countplot(df.BATHROOMS)
 ```
@@ -194,6 +208,7 @@ sns.countplot(df.BATHROOMS)
 plt.figure(figsize=(15,4))
 fig = sns.lineplot(x=df['HOUSE_AGE'], y=df['PRICE'])
 ```
+![image](https://github.com/user-attachments/assets/94224200-e972-41b1-a2b1-7c5e0a49c6aa)
 
 - correlation heatmap
 ```
@@ -202,6 +217,7 @@ sns.heatmap(df.corr())
 #top correlated variables
 df.corr()['PRICE_Log'].sort_values(ascending=False)
 ```
+![image](https://github.com/user-attachments/assets/bd7618ce-1747-40ba-8c01-71211a42f238)
 
 ## Modeling Techniques
 - Machine Learning algorithms such as Linear Regression was used for predictive analysis.
@@ -242,6 +258,7 @@ print("Linear Regression Test R^2 Score: ", mlr.score(x_test, y_test))
 print("Mean Squared Error: ", mean_squared_error(pred_mlr, y_test))
 print("Mean Absolute Error: ", metrics.mean_absolute_error(pred_mlr, y_test))
 ```
+![image](https://github.com/user-attachments/assets/0f7cb837-e96c-4b93-b121-4a4e42fdde30)
 
 
 ## Key Outcomes
